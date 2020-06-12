@@ -16,6 +16,11 @@ ol, ul {
   margin: auto;
 }
 
+.game-title{
+  display: flex;
+  justify-content: center;
+}
+
 .board-row{
 
   width: 100%;
@@ -50,8 +55,20 @@ ol, ul {
   font-size: 3rem;
 }
 
-.square:focus {
+.square:focus,
+.square:hover{
   outline: none;
+  background-color: rgba(200,200,200,0.5);
+}
+
+.square.X{
+  background-color: #ECAB03;
+  color: white;
+}
+
+.square.O{
+  background-color: #004E94;
+  color: white;
 }
 
 .kbd-navigation .square:focus {

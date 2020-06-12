@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import "./index.css";
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 function Square(props){
   return (
-    <button className="square" onClick={props.onClick}>
+    <button className={"square " + props.value} onClick={props.onClick}>
       {props.value}
     </button>
   );
@@ -106,12 +106,14 @@ class Game extends React.Component {
 
     return (
       <div className="game">
+        <div className="game-title">
+          <h2>{status}</h2>
+        </div>
         <Board
           squares={current.squares}
           onClick={(i) => this.handleClick(i)}
         />
         <div className="game-info">
-          <div>{status}</div>
           <div>{moves}</div>
         </div>
       </div>
